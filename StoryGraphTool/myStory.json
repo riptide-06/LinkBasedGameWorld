@@ -1,0 +1,59 @@
+{
+    "Title": "Secrets of the Mistwood",
+    "Credits": "Created by Tarun Nagaraju (tnagaraj@ucsc.edu).",
+    "InitialLocation": "ForestEntrance",
+    "Locations": {
+      "ForestEntrance": {
+        "Body": "You awaken at the edge of an ancient, mist‑shrouded forest where time seems to stand still. In the distance you glimpse crumbling ruins, an abandoned cabin, and a deep well said to guard buried secrets. Where will you venture first?",
+        "Choices": [
+          { "Text": "Enter the Cabin",        "Target": "Cabin" },
+          { "Text": "Approach the Well",      "Target": "Well" },
+          { "Text": "Step into the Clearing", "Target": "Clearing" }
+        ]
+      },
+      "Well": {
+        "Body": "A deep stone well yawns before you, its depths dark and quiet. At the bottom, something metallic catches the moonlight.",
+        "ItemPickup": "iron_gear",
+        "Choices": [
+          { "Text": "Climb back to the forest edge", "Target": "ForestEntrance" },
+          { "Text": "Descend toward the Ruins",       "Target": "Ruins" }
+        ]
+      },
+      "Clearing": {
+        "Body": "The clearing is scattered with moss‑covered stones and faint carvings hinting at forgotten rites. You notice a rusty crank lodged in the bark of an old oak.",
+        "ItemPickup": "crank",
+        "Choices": [
+          { "Text": "Return to the forest edge", "Target": "ForestEntrance" },
+          { "Text": "Venture toward the Ruins",   "Target": "Ruins" }
+        ]
+      },
+      "Cabin": {
+        "Body": "The abandoned cabin stands crooked among pine trees. Inside, a dusty radio sits on a wooden table, its knobs frozen in time.",
+        "hasRadio": true,
+        "Choices": [
+          { "Text": "Leave the cabin", "Target": "Clearing" }
+        ]
+      },
+      "Ruins": {
+        "Body": "Crumbling stone ruins emerge from brambles. A locked iron chest rests against one wall, its keyhole beckoning.",
+        "Choices": [
+          { "Text": "Go back to the forest edge", "Target": "ForestEntrance" },
+          {
+            "Text": "Open the chest",
+            "Target": "SecretChamber",
+            "requiresItem": "iron_gear"
+          }
+        ]
+      },
+      "SecretChamber": {
+        "Body": "Behind the ruins, a hidden chamber reveals a pedestal bearing a carved map fragment.",
+        "Choices": [
+          { "Text": "Take the map fragment", "Target": "Escape" }
+        ]
+      },
+      "Escape": {
+        "Body": "A narrow path opens up, bathed in soft light. You follow it out of the forest, its mysteries etched forever in your mind."
+      }
+    }
+  }
+  
